@@ -1,0 +1,10 @@
+.cards {
+    display: grid;
+    grid-template-columns: 1fr 1fr; /* 2 colonnes de même taille */
+    grid-template-rows: 100px 50px 150px; /* 3 lignes de tailles différentes */
+}
+
+.card {
+    border: 2px solid gray;
+    border-radius: 9px 9px;
+}
