@@ -1,17 +1,17 @@
-.cards {
-    width: 240px;
-}
-
 .card {
+    width: auto;
     border: 2px solid gray;
     border-radius: 9px 9px;
+    height: auto;
 }
 
-img {
-    margin: 7px 9px 7px 7px;
+.card__img img{
+    border-top-left-radius: 9px;
+    border-top-right-radius: 9px;
+    /* margin: 7px 9px 7px 7px; */
 }
 
-.cards .title {
+.card .title {
     display: flex;
     justify-content: space-between;
     margin-bottom: 6px;
@@ -20,12 +20,35 @@ img {
 .title a {
     text-decoration: none;
     color: black;
+    font-weight: bold;
 }
 
 .title a:hover {
     text-decoration: underline;
 }
 
-.cards .information {
+.card .information {
     margin: 7px 7px 7px 7px;
 }
+
+.description {
+    overflow: auto;
+    width: 220px;
+    height: 110px;
+}
+
+.card__button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 4px 0px 6px 0px;
+}
+
+.card button {
+    background-color: blue;
+    color: white;
+    border-radius: 9px 9px;
+    border: none;
+    text-align: center;
+}
+
