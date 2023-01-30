@@ -7,14 +7,14 @@ const Card = () => {
         <div className='cards'>
             <div className='card'>    
                 <div>
-                    <img src="https://via.placeholder.com/150" onError="this.src='image-null.jpg'" alt="image du produit" />
+                    <img src="https://via.placeholder.com/220" onError="this.src='image-null.jpg'" alt="image du produit" />
                 </div>
-                <div>
+                <div className='information'>
                     <div className='title'>
-                        <div>titre</div>
-                        <div>prix</div>
+                        <div><a href='#' alt="Affichage detail article">Titre</a></div>
+                        <div>Prix</div>
                     </div>
-                    <div>description</div>
+                    <div>Description</div>
                 </div>
             </div>
         </div>

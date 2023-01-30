@@ -10,11 +10,12 @@
     height: 30px;
     right: 20px;
     top: 12px;
+
   }
   
   /* Color/shape of burger icon bars */
   .bm-burger-bars {
-    background: black;
+    background: white;
     border-radius: 10px;
   }
   

@@ -1,10 +1,31 @@
 .cards {
-    display: grid;
-    grid-template-columns: 1fr 1fr; /* 2 colonnes de même taille */
-    grid-template-rows: 100px 50px 150px; /* 3 lignes de tailles différentes */
+    width: 240px;
 }
 
 .card {
     border: 2px solid gray;
     border-radius: 9px 9px;
+}
+
+img {
+    margin: 7px 9px 7px 7px;
+}
+
+.cards .title {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 6px;
+}
+
+.title a {
+    text-decoration: none;
+    color: black;
+}
+
+.title a:hover {
+    text-decoration: underline;
+}
+
+.cards .information {
+    margin: 7px 7px 7px 7px;
 }
