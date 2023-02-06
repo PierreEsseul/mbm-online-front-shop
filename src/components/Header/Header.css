@@ -5,6 +5,7 @@
     height: 3.7rem;
     background-color: black;
     margin-bottom: 2rem;
+    position: fixed;
 }
 
 .header h1 {

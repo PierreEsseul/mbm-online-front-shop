@@ -11,7 +11,7 @@ function BurgerMenu() {
             <Menu right>
                     <a className="menu-item" href="/">Accueil</a>
 
-                    <a className="menu-item" href="/panier">Panier</a>
+                    <a className="menu-item" href="/cart">Panier</a>
 
                     <a className="menu-item" href="#contact">Contact</a>
             </Menu>
