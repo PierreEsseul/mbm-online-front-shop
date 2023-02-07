@@ -9,7 +9,7 @@ const Cards = (props) => {
     return (
         <div className='cards'> 
             {props?.data ? props.data.articles.map(product => 
-            <Card product={product} key={product.id_article}></Card>
+            <Card product={product} key={product.id}></Card>
             ) 
             : "chargement shop"
             }   

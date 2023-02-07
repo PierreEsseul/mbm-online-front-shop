@@ -3,7 +3,7 @@ import BurgerMenu from '../BurgerMenu/BurgerMenu';
 
 import './Header.css';
 
-const Header = () => {
+const Header = (props) => {
     return(
         <div className='header'>
             <h1>Shop Name</h1>

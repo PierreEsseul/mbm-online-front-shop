@@ -1,10 +1,12 @@
 import React from 'react';
 import { useShoppingCart } from 'use-shopping-cart';
+import { formatCurrencyString } from 'use-shopping-cart';
 
 import './Card.css'
 
 const Card = (props) => {
-    const {addItem, removeItem} = useShoppingCart();
+    //formatCurrencyString({ value: props.product.amount.article, currency: 'USD' })
+    const {addItem} = useShoppingCart();
     console.log("Value addItem", {addItem});
     console.log(useShoppingCart());
 
@@ -16,8 +18,8 @@ const Card = (props) => {
                 </div>
                 <div className='information'>
                     <div className='title'>
-                        <div className='name'>{props.product ? props.product.name_article : 'article1'}</div>
-                        <div>{props.product.amount_article}€</div>
+                        <div className='name'>{props.product ? props.product.name : 'article1'}</div>
+                        <div>{props.product.price}€</div>
                     </div>
                     <div className='description'>{props.product.description}</div>
                 </div>

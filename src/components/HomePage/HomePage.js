@@ -22,6 +22,7 @@ const HomePage = () => {
 //   }, []);
 
 
+
     return (
         <div className='home_page'>
                 <Cards data={data}/>
@@ -31,8 +32,7 @@ const HomePage = () => {
 
 export default HomePage;
 
-
-
+  
 const data = {
     "user": {
         "id_user": 88,
@@ -65,7 +65,7 @@ const data = {
             "id_shop": 888,
             "name_article": "Olympe",
             "picture_url": "https://images-mbm2.s3.us-west-2.amazonaws.com/1674227461931-olympe.png",
-            "amount_article": 399.00,
+            "price": 399.10,
             "description": "Fleur du bonheur",
             "created_at": "2023-01-20T15:12:39.000Z",
             "updated_at": "2023-01-20T15:12:39.000Z"
@@ -76,7 +76,7 @@ const data = {
             "id_shop": 888,
             "name_article": "Iris",
             "picture_url": "https://images-mbm2.s3.us-west-2.amazonaws.com/1674227496430-iris.png",
-            "amount_article": 33.00,
+            "price": 33.00,
             "description": "fleur de la gaïté",
             "created_at": "2023-01-20T15:12:39.000Z",
             "updated_at": "2023-01-20T15:12:39.000Z"
