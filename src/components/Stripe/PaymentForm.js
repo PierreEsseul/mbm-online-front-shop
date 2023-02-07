@@ -2,22 +2,24 @@ import React, {useState} from 'react'
 import { CardElement, useElements, useStripe} from "@stripe/react-stripe-js"
 import axios from "axios"
 
+import './Stripe.css'
+
 const CARD_OPTIONS = {
 	iconStyle: "solid",
 	style: {
 		base: {
-			iconColor: "#c4f0ff",
-			color: "#fff",
+			iconColor: "#91C1ED",
+			color: "#000",
 			fontWeight: 500,
 			fontFamily: "Roboto, Open Sans, Segoe UI, sans-serif",
 			fontSize: "16px",
 			fontSmoothing: "antialiased",
-			":-webkit-autofill": { color: "#fce883" },
-			"::placeholder": { color: "#87bbfd" }
+			":-webkit-autofill": { color: "#91C1ED" },
+			"::placeholder": { color: "#91C1ED" }
 		},
 		invalid: {
-			iconColor: "#ffc7ee",
-			color: "#ffc7ee"
+			iconColor: "#FE393C",
+			color: "#FE393C"
 		}
 	}
 }
@@ -39,10 +41,26 @@ export default function PaymentForm() {
     if(!error){
         try{ 
             const {id} = paymentMethod;
-            const response = await axios.post("http://localhost:4000/payment", {
-                amount: 1000,
-                id
-            })
+            const amount = 1000;
+            // const response = await axios.post(`${process.env.REACT_APP_URL_BACK}/online/back/payment`, {
+            //     amount: 1000,
+            //     id
+            // })
+          
+            const response = await fetch(
+                `${process.env.REACT_APP_URL_BACK}/online/back/payment`,
+                {
+                mode:"no-cors",
+                method: "POST",
+                body: JSON.stringify(amount, id),
+                headers: {
+                    "Content-Type": "application/json",
+                },
+                }
+            );
+    
+            const data = await response.json();
+            console.log("data:", data);
 
             if(response.data.success){
                 console.log("payment is a success")
@@ -50,6 +68,7 @@ export default function PaymentForm() {
             }
 
         }catch(error){
+            console.log("test")
             console.log("Error: ", error)
         }
     }else{
@@ -58,7 +77,7 @@ export default function PaymentForm() {
 }
 
   return (
-    <>
+    <div className='card'>
         {!success ?
         <form onSubmit={handleSubmit}>
             <fielset className="FormGroup">
@@ -74,6 +93,6 @@ export default function PaymentForm() {
         </div> 
         }
         
-    </>
+    </div>
   )
 }
