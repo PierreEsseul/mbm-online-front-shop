@@ -5,6 +5,11 @@
     margin-left: 0.5rem;
 }
 
+.cart h3 {
+    width: 100%;
+    text-align: center;
+}
+
 .items{
     display: flex;
     justify-content: space-between;

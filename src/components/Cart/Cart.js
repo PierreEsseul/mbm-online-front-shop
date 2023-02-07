@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { useShoppingCart } from 'use-shopping-cart';
+import { useNavigate } from 'react-router-dom';
 
 import {AiOutlinePlusCircle, AiOutlineMinusCircle} from 'react-icons/ai';
 
@@ -7,7 +8,7 @@ import './Cart.css';
 
 const Cart = (props) => {
 
-    const { cartCount, currency, totalPrice, cartDetails, addItem, removeItem} = useShoppingCart()
+    const { cartCount, currency, totalPrice, cartDetails, addItem, removeItem, clearCart } = useShoppingCart()
 
     console.log("Value cartCount : ",cartCount)
     console.log("Value cartDetails : ", cartDetails)
@@ -15,21 +16,21 @@ const Cart = (props) => {
     console.log("Value currency : ", {currency});
 
     const [quantity, setQuantity] = useState(0);
+
+    const navigate = useNavigate();
     
     function addQuantity(quantity, product) {
-        setQuantity(quantity++); 
         addItem(product);
     }
 
     function removeQuantity(quantity, product, cartCount) {
-        setQuantity(quantity--);
         removeItem(product);
         console.log(product)
     }
 
-    function payment() {
-        //TODO: redirection to STRIPE
-    }
+    const payment = () => {
+        navigate('/payment');
+    };
     
     return (
     <div className='cart'>
@@ -57,6 +58,10 @@ const Cart = (props) => {
             
             <div className='payment'>
                 <button type='button' onClick={payment} >Payer</button>
+            </div>
+
+            <div>
+                <button onClick={clearCart}>Remove all items</button>
             </div>
     </div>
   
