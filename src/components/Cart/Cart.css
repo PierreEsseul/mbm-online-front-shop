@@ -1,0 +1,60 @@
+.cart {
+    position: absolute;
+    margin-top: 5.1rem;
+    width: 95%;
+    margin-left: 0.5rem;
+}
+
+.items{
+    display: flex;
+    justify-content: space-between;
+    margin-top: 0.4rem;
+}
+
+.items img {
+   width: 50px;
+   height: auto;
+}
+
+.items .items__quantity {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 0.3rem;
+}
+
+.items button {
+    background: none;
+    border: none;
+}
+
+.cart .total__price {
+    margin-top: 0.9rem;
+    display: flex;
+    justify-content: right;
+    gap: 0.9rem;
+}
+
+.total__price .total {
+    text-decoration: underline;
+}
+
+.total__price .amount {
+    font-weight: bold;
+}
+
+.cart .payment {
+    margin-top: 1.6rem;
+    display: flex;
+    justify-content: center;
+}
+
+.payment button {
+    border: none;
+    background-color: black;
+    color: white;
+    border-radius: 20px;
+    font-size: larger;
+    padding-left: 0.7rem;
+    padding-right: 0.7rem;
+}
