@@ -1,6 +1,5 @@
 import React, {useState} from 'react'
 import { CardElement, useElements, useStripe} from "@stripe/react-stripe-js"
-import axios from "axios"
 
 import './Stripe.css'
 
@@ -33,48 +32,52 @@ export default function PaymentForm() {
 
     const handleSubmit = async (e) => {
         e.preventDefault();
-        const {error, paymentMethod} = await stripe.createPaymentMethod({
-            type: "card",
-            card: elements.getElement(CardElement)
-        })
- 
-    if(!error){
-        try{ 
-            const {id} = paymentMethod;
-            const amount = 1000;
-            // const response = await axios.post(`${process.env.REACT_APP_URL_BACK}/online/back/payment`, {
-            //     amount: 1000,
-            //     id
-            // })
-          
-            const response = await fetch(
-                `${process.env.REACT_APP_URL_BACK}/online/back/payment`,
-                {
-                mode:"no-cors",
-                method: "POST",
-                body: JSON.stringify(amount, id),
-                headers: {
-                    "Content-Type": "application/json",
-                },
-                }
-            );
-    
-            const data = await response.json();
-            console.log("data:", data);
 
-            if(response.data.success){
-                console.log("payment is a success")
-                setSuccess(true)
+        try {
+            const { error, paymentMethod } = await stripe.createPaymentMethod({
+                type: "card",
+                card: elements.getElement(CardElement)
+            })
+
+            console.log('{error, paymentMethod} :>> ', { error, paymentMethod });
+
+            if (!error) {
+                try {
+                    const { id } = paymentMethod;
+                    const amount = 1000;
+
+                    const response = await fetch(
+                        `${process.env.REACT_APP_URL_BACK}/online/back/payment`,
+                        {
+                            method: "POST",
+                            body: JSON.stringify(amount, id),
+                            headers: {
+                                "Content-Type": "application/json",
+                            },
+                        }
+                    );
+
+                    const data = await response.json();
+                    console.log("data:", data);
+
+                    if (response.data.success) {
+                        console.log("payment is a success")
+                        setSuccess(true)
+                    }
+
+                } catch (error) {
+                    console.log("test")
+                    console.log("Error: ", error)
+                }
+            } else {
+                console.log(error.message);
             }
 
-        }catch(error){
-            console.log("test")
-            console.log("Error: ", error)
+
+        } catch (error) {
+            console.log('handleSubmit: error :>> ', error);
         }
-    }else{
-        console.log(error.message);
     }
-}
 
   return (
     <div className='card'>
