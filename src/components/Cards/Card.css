@@ -50,6 +50,11 @@
     margin: 4px 0px 6px 0px;
 }
 
+.card .change-quantity {
+    display: flex;
+    gap: 1.2rem;
+}
+
 .card button {
     background-color: rgb(27, 115, 249);
     color: white;

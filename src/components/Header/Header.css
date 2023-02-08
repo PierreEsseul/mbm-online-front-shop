@@ -8,6 +8,10 @@
     position: fixed;
 }
 
+.header a {
+    text-decoration: none;
+}
+
 .header h1 {
     color: white;
     font-size: 1.5rem;
