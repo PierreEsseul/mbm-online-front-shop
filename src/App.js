@@ -5,8 +5,14 @@ import Header from './components/Header/Header';
 import Error404 from './components/Error/Error404';
 import HomePage from './components/HomePage/HomePage';
 import Cart from './components/Cart/Cart';
+<<<<<<< HEAD
+=======
+import Contact from './components/Contact/Contact';
+// import StripeContainer from './components/Stripe/StripeContainer'
+>>>>>>> pierre
 import ParentComponent from './components/Stripe/ParentComponent'
 import PaymentSuccess from './components/Stripe/PaymentSuccess/PaymentSuccess';
+
 
 
 function App() {
@@ -17,6 +23,7 @@ function App() {
         <Routes>
             <Route exact path='/' element={<HomePage />} />
             <Route path='/cart' element={<Cart />} />
+            <Route path='/contact' element={<Contact />} />
             <Route path='/payment' element={<ParentComponent />}/>
             <Route path='/payment_success' element={<PaymentSuccess />}/>
             {/* <Route path='/cgu' element={<Cgu />} />

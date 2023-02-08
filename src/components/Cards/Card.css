@@ -56,10 +56,12 @@
 }
 
 .card button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
     background-color: rgb(27, 115, 249);
     color: white;
-    border-radius: 9px 9px;
+    border-radius: 30px 30px;
     border: none;
-    text-align: center;
 }
 
