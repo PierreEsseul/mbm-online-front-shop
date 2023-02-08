@@ -22,11 +22,15 @@ const HomePage = () => {
 //   }, []);
 
 
-
     return (
-        <div className='home_page'>
-                <Cards data={data}/>
-        </div>
+      <div className="home_page">
+        <Cards
+          data={{
+            ...data,
+            articles: data?.articles?.map((d) => ({ ...d, id: d.id_article })),
+          }}
+        />
+      </div>
     );
 };
 

@@ -8,25 +8,23 @@ import './Cart.css';
 
 const Cart = (props) => {
 
-    const { cartCount, currency, totalPrice, cartDetails, addItem, removeItem, clearCart } = useShoppingCart()
+    const { 
+        cartCount, 
+        currency, 
+        totalPrice, 
+        cartDetails, 
+        removeItem, 
+        incrementItem,
+        decrementItem,
+        clearCart,  
+    } = useShoppingCart()
 
     console.log("Value cartCount : ",cartCount)
     console.log("Value cartDetails : ", cartDetails)
     console.log("total price : ",totalPrice);
     console.log("Value currency : ", {currency});
 
-    const [quantity, setQuantity] = useState(0);
-
     const navigate = useNavigate();
-    
-    function addQuantity(quantity, product) {
-        addItem(product);
-    }
-
-    function removeQuantity(quantity, product, cartCount) {
-        removeItem(product);
-        console.log(product)
-    }
 
     const payment = () => {
         navigate('/payment');
@@ -43,9 +41,18 @@ const Cart = (props) => {
                     <div><img src={value.picture_url} alt="product display" /></div>
                     <div className='items__name'>{value.name_article}</div>
                     <div className='items__quantity'>
-                        <button type='button' onClick={removeQuantity}><AiOutlineMinusCircle /></button>
-                        <div>{quantity}</div>
-                        <button type='button' onClick={addQuantity}><AiOutlinePlusCircle /></button>
+                        <button
+                            type='button'
+                            onClick={() => decrementItem(key)}> 
+                            
+                                <AiOutlineMinusCircle />
+                        </button>
+                        <div>{value.quantity}</div>
+                        <button 
+                            type='button' 
+                            onClick={() => incrementItem(key)}>
+                                <AiOutlinePlusCircle />
+                        </button>
                     </div>
                     <div className='items__price'>{value.price}€</div>
                 </div> 
