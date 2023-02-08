@@ -5,6 +5,8 @@ import { useShoppingCart } from 'use-shopping-cart';
  
 import CheckoutForm from "./CheckoutForm";
 
+import './ParentComponent.css'
+
 const PUBLIC_KEY = `${process.env.REACT_APP_STRIPE_PUBLIC_KEY}`;
 const stripePromise = loadStripe(PUBLIC_KEY);
 
@@ -36,7 +38,7 @@ export default function App() {
   };
  
   return (
-    <div className="App">
+    <div className="stripe">
       {clientSecret && (
         <Elements options={options} stripe={stripePromise}>
           <CheckoutForm />

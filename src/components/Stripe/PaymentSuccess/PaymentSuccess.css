@@ -1,0 +1,31 @@
+.page{
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin: auto;
+    width: 100%;
+    height: 80%;
+}
+
+.page button {
+    border: none;
+    background-color: black;
+    color: white;
+    border-radius: 20px;
+    font-size: larger;
+    padding-left: 0.7rem;
+    padding-right: 0.7rem;
+    margin-left: 91px;
+    margin-top: 30px;
+}
+
+.page img{
+    width: 80%;
+    margin-left: 35px;
+}
+
+.page h3{
+    text-align: center;
+}

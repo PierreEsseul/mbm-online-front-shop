@@ -1,4 +1,9 @@
 import React, { useEffect, useState } from "react";
+import { useShoppingCart } from 'use-shopping-cart';
+import {FaLock} from 'react-icons/fa';
+
+import './CheckoutForm.css'
+
 import {
  PaymentElement,
  useStripe,
@@ -6,10 +11,13 @@ import {
 } from "@stripe/react-stripe-js";
  
 export default function CheckoutForm() {
+
  const stripe = useStripe();
  const elements = useElements();
  const [message, setMessage] = useState(null);
  const [isLoading, setIsLoading] = useState(false);
+
+ const {totalPrice, clearCart} = useShoppingCart()
  
  useEffect(() => {
    if (!stripe) {
@@ -50,7 +58,7 @@ export default function CheckoutForm() {
    const { error } = await stripe.confirmPayment({
      elements,
      confirmParams: {
-       return_url: "http://localhost:3000",
+       return_url: `${process.env.REACT_APP_URL_FRONT}/payment_success`,
      },
    });
    if (error.type === "card_error" || error.type === "validation_error") {
@@ -59,16 +67,26 @@ export default function CheckoutForm() {
      setMessage("An unexpected error occured.");
    }
    setIsLoading(false);
+   
  };
  
  return (
    <form id="payment-form" onSubmit={handleSubmit}>
      <PaymentElement id="payment-element" />
-     <button disabled={isLoading || !stripe || !elements} id="submit">
-       <span id="button-text">
-         {isLoading ? <div className="spinner" id="spinner"></div> : "Pay now"}
-       </span>
-     </button>
+     <div className="button__price">
+        <button disabled={isLoading || !stripe || !elements} id="submit" className="button">
+          <div className="button__child">
+            <FaLock className="icon"/>
+            <div className="button__greatchildren">
+              <span id="button-text">
+                {isLoading ? <div className="lds-ring"><div></div><div></div><div></div><div></div></div> : "Payer"}
+              </span>
+              <h4>{totalPrice}€</h4>
+            </div>
+          </div>  
+        </button>
+     </div>
+     
      {/* Show any error or success messages */}
      {message && <div id="payment-message">{message}</div>}
    </form>
