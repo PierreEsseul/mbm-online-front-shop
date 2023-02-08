@@ -1,13 +1,26 @@
 .cart {
     position: absolute;
-    margin-top: 5.1rem;
+    margin-top: 5.4rem;
     width: 95%;
     margin-left: 0.5rem;
 }
 
-.cart h3 {
+.cart .redirect__accueil {
+    margin-bottom: 1.5rem;
+}
+
+.cart .redirect__accueil a {
+    color: rgb(65, 64, 64);
+}
+
+.cart .empty__cart h3 {
     width: 100%;
     text-align: center;
+    margin-bottom: 8rem;
+}
+
+.empty__cart a {
+    margin-left: 20%;
 }
 
 .items{
@@ -55,7 +68,7 @@
     justify-content: center;
 }
 
-.payment button {
+.payment button, .cart .empty__cart a {
     border: none;
     background-color: black;
     color: white;

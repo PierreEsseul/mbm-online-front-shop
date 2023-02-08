@@ -1,5 +1,5 @@
 async function getShopHandler(slugify) {
-
+    
     try {
     const response = await fetch(
         `${process.env.REACT_APP_URL_BACK}/online/back?slugify=${slugify}`,

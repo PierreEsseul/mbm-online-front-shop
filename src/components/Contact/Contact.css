@@ -1,0 +1,24 @@
+.contact {
+    position: absolute;
+    margin-top: 6.3rem;
+    width: auto;
+    margin-left: 1.9rem;
+}
+
+.contact .mail, .contact .phone {
+    display: flex;
+    align-items: center; 
+    gap: 1rem;
+    margin-top: 0.6rem;
+
+}
+
+.address p, .hours p {
+    text-decoration: underline;
+    font-weight: bold;
+}
+
+.address__details, .hours__details {
+    margin-left: 2rem;
+}
+

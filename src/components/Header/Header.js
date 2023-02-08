@@ -1,5 +1,8 @@
 import React from 'react';
-import BurgerMenu from '../BurgerMenu/BurgerMenu';
+
+import {MdOutlinePermContactCalendar} from 'react-icons/md';
+import {AiOutlineShoppingCart} from 'react-icons/ai';
+
 
 import './Header.css';
 
@@ -8,8 +11,9 @@ const Header = (props) => {
         <div className='header'>
             <a href="/"><h1>Shop Name</h1></a>
 
-            <div>
-                <BurgerMenu />
+            <div className='icons'>
+                <a href="/cart"><AiOutlineShoppingCart /></a>
+                <a href="/contact"><MdOutlinePermContactCalendar /></a>
             </div>
         </div>
     );
