@@ -12,8 +12,6 @@ const Card = (props, key) => {
         addItem(props.product);
     }
 
-    const price = (props.product.price).toFixed(2);
-
     return (  
         <div className='card'>
                 <div className='card__img'>
@@ -22,7 +20,7 @@ const Card = (props, key) => {
                 <div className='information'>
                     <div className='title'>
                         <div className='name'>{props.product ? props.product.name_article : 'article1'}</div>
-                        <div>{price}€</div>
+                        <div>{props.product.price.toFixed(2)}€</div>
                     </div>
                     <div className='description'>{props.product.description}</div>
                 </div>
