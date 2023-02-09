@@ -90,4 +90,41 @@
 }
 
 
+ @media (min-width: 800px) and (max-width: 1400px) {
+    .cards{
+        display: grid;
+        grid-template-columns: 1fr 1fr ;
+        grid-template-rows: 100px 100px 100px;
+        grid-gap: 20px;
+        grid-row-gap: 23rem;
+        margin: auto;
+        justify-content: center;
+        width: 300px;
+    }
+
+    .card__img {
+        width: 320px;
+        height: 280px;
+    }
+}
+
+@media (min-width: 1400px) {
+    .cards{
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-template-rows: 100px 100px 100px;
+        grid-gap: 30px;
+        grid-row-gap: 23rem;
+        margin: auto;
+        justify-content: center;
+        width: 500px;
+    }
+
+    .card__img {
+        width: 400px;
+        height: 320px;
+    }
+    
+}
+
 

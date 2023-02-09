@@ -38,3 +38,10 @@
     border-radius: 50%;
     font-size: 15px;
 }
+
+@media (min-width: 800px){
+
+    .header {
+        height: 4.5rem;
+    }
+}

@@ -29,3 +29,50 @@
     width: 102px;
 }
 
+
+.image{
+    display: none;
+}
+
+@media (min-width: 1200px) and (max-width: 1800px) {
+    .image{
+        display: inline;
+        position: relative;
+        left: 43rem;
+        top: 6rem;
+    }  
+    
+    .contact{
+        font-size: 30px;
+        margin-left: 5%;
+    }
+
+    .contact a{
+        width: 200px;
+    }
+}
+
+@media (min-width: 1800px){
+
+    .parent__contact{
+        display: flex;
+    }
+
+    .contact{
+        font-size: 30px;
+        margin-left: 5%;
+    }
+
+    .contact a{
+        width: 200px;
+    }
+
+    .image{
+        display: inline;
+        position: relative;
+        left: 80rem;
+        top: 6rem;
+    }    
+
+    
+}
