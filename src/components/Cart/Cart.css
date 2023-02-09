@@ -31,7 +31,8 @@
 }
 
 .items img {
-   width: 50px;
+   width: 125px;
+   border-radius: 10px;
    height: auto;
 }
 
@@ -45,6 +46,10 @@
 .items button {
     background: none;
     border: none;
+}
+
+.items button svg {
+    display: block;
 }
 
 .cart .total__price {
@@ -76,4 +81,5 @@
     font-size: larger;
     padding-left: 0.7rem;
     padding-right: 0.7rem;
+    text-decoration: none;
 }

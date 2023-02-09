@@ -1,19 +1,22 @@
+.cards{
+    width: 340px;
+}
+
 .card {
     width: auto;
-    border: 2px solid gray;
+    border: 2px;
     border-radius: 9px 9px;
     height: auto;
     margin-bottom: 2rem;
 }
 
 .card__img {
-    width: 240px;
-    height: 220px;
+    width: 340px;
+    height: 320px;
 }
 
 .card__img img {
-    border-top-left-radius: 6px;
-    border-top-right-radius: 6px;
+    border-radius: 13px;
     object-fit: cover;
     width: 100%;
     height: 100%;
@@ -37,10 +40,33 @@
     margin: 7px 7px 7px 7px;
 }
 
+.parent__description{
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+}
+
 .description {
     overflow: auto;
     width: 220px;
-    height: 110px;
+    height: 60px;
+    text-align: justify;
+    display: flex;
+    align-items: flex-start;
+}
+
+.CiCircleChevUp {
+    margin-left: 180px;
+}
+.child__description{
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+}
+
+
+.description div p{
+    display: contents;
 }
 
 .card__button {
@@ -59,9 +85,10 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    background-color: rgb(27, 115, 249);
-    color: white;
+    background:none;
+    color: black;
     border-radius: 30px 30px;
     border: none;
+    font-size: 25px;
 }
 

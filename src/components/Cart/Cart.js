@@ -31,7 +31,6 @@ const Cart = (props) => {
         {cartCount === 0 && (
             <div className='empty__cart'>
                 <h3>Vous n'avez pas d'article</h3> 
-
                 <a href="/">Commencer vos achats</a>
             </div>
 

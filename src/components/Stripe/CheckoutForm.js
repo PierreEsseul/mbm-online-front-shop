@@ -17,7 +17,8 @@ export default function CheckoutForm() {
  const [message, setMessage] = useState(null);
  const [isLoading, setIsLoading] = useState(false);
 
- const {totalPrice, clearCart} = useShoppingCart()
+ const {totalPrice} = useShoppingCart();
+ const total = totalPrice.toFixed(2);
  
  useEffect(() => {
    if (!stripe) {
@@ -81,7 +82,7 @@ export default function CheckoutForm() {
               <span id="button-text">
                 {isLoading ? <div className="lds-ring"><div></div><div></div><div></div><div></div></div> : "Payer"}
               </span>
-              <h4>{totalPrice}€</h4>
+              <h4>{total}€</h4>
             </div>
           </div>  
         </button>
