@@ -24,3 +24,17 @@
     color: white;
     margin-right: 1.3rem;
 }
+
+.number{
+    position: absolute;
+    right: 64px;
+    bottom: 19px;
+    width: 20px;
+}
+.header p {
+    color: white;
+    background: #FFBF23;
+    text-align: center;
+    border-radius: 50%;
+    font-size: 15px;
+}
