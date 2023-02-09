@@ -2,14 +2,15 @@ import React from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 
 import Header from './components/Header/Header';
+import Footer from './components/Footer/Footer';
 import Error404 from './components/Error/Error404';
 import HomePage from './components/HomePage/HomePage';
 import Cart from './components/Cart/Cart';
 import Contact from './components/Contact/Contact';
-// import StripeContainer from './components/Stripe/StripeContainer'
-import ParentComponent from './components/Stripe/ParentComponent'
+import Cgu from './components/LegalMention/Cgu';
+import LegalMention from './components/LegalMention/LegalMention';
+import ParentComponent from './components/Stripe/ParentComponent';
 import PaymentSuccess from './components/Stripe/PaymentSuccess/PaymentSuccess';
-
 
 
 function App() {
@@ -23,11 +24,12 @@ function App() {
             <Route path='/contact' element={<Contact />} />
             <Route path='/payment' element={<ParentComponent />}/>
             <Route path='/payment_success' element={<PaymentSuccess />}/>
-            {/* <Route path='/cgu' element={<Cgu />} />
-            <Route path='/legal-mention' element={<LegalMention />} /> */}
+            <Route path='/cgu' element={<Cgu />} />
+            <Route path='/legal-mention' element={<LegalMention />} />
             <Route path='*' element={<Error404/>} />
         </Routes>
       </Router>
+      <Footer />
     </div>
     
   );
