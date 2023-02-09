@@ -57,18 +57,18 @@ const Cart = (props) => {
                     </div>
                     <div className='items__price'>{value.price}€</div>
                 </div> 
-            
-            
-                <div className='total__price'>
-                    <div className='total'>Prix total :</div>
-                    <div className='amount'>{total}€</div>
-                </div> 
                 
             </div>
         ))}
         {cartCount !== 0 && (
-            <div className='payment'>
-                <button type='button' onClick={payment} >Payer</button>
+            <div>
+                <div className='total__price'>
+                    <div className='total'>Prix total :</div>
+                    <div className='amount'>{total}€</div>
+                </div> 
+                <div className='payment'>
+                    <button type='button' onClick={payment} >Payer</button>
+                </div>
             </div>
         )}  
     </div>
