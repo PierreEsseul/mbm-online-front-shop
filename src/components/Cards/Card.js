@@ -1,7 +1,6 @@
 import React, {useState} from 'react';
 import { useShoppingCart } from 'use-shopping-cart';
 import {AiOutlinePlusCircle, AiOutlineMinusCircle} from 'react-icons/ai';
-import {BsFillCartPlusFill} from 'react-icons/bs';
 import {CiCircleChevDown, CiCircleChevUp} from 'react-icons/ci'
 
 
@@ -61,7 +60,7 @@ const Card = (props, key) => {
                                 onClick={addToCart}
                                 aria-label={`Add ${props.product.name} to your cart`}
                             >
-                                <BsFillCartPlusFill  />
+                                <h4 className='ajouter'>Ajouter au panier</h4>
                             </button>
                         }
                         {cartDetails[props.product.id]?.quantity  &&

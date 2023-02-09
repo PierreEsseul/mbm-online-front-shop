@@ -22,3 +22,10 @@
     margin-left: 2rem;
 }
 
+.contact a{
+    display: block;
+    margin-top: 14px;
+    color: black;
+    width: 102px;
+}
+

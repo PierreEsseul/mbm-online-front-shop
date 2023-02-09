@@ -10,6 +10,9 @@ const Contact = (props) => {
 
     return (
         <div className='contact'>
+            
+            <h3>Informations sur la boutique</h3>
+
             <div>
                 <div className='mail'>
                     <HiMail />
@@ -33,6 +36,8 @@ const Contact = (props) => {
                     <div>10H - 14H</div>
                 </div>
             </div>
+
+            <a href='/'>Retour Accueil</a>
         </div>
     )
 };
