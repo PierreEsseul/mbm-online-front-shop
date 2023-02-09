@@ -20,8 +20,6 @@ const Cart = (props) => {
     const payment = () => {
         navigate('/payment');
     };
-
-    const total = (totalPrice).toFixed(2);
     
     return (
     <div className='cart'>
@@ -55,7 +53,7 @@ const Cart = (props) => {
                                 <AiOutlinePlusCircle />
                         </button>
                     </div>
-                    <div className='items__price'>{value.price}€</div>
+                    <div className='items__price'>{value.price.toFixed(2)}€</div>
                 </div> 
                 
             </div>
@@ -64,7 +62,7 @@ const Cart = (props) => {
             <div>
                 <div className='total__price'>
                     <div className='total'>Prix total :</div>
-                    <div className='amount'>{total}€</div>
+                    <div className='amount'>{totalPrice.toFixed(2)}€</div>
                 </div> 
                 <div className='payment'>
                     <button type='button' onClick={payment} >Payer</button>

@@ -17,6 +17,7 @@ const Card = (props, key) => {
         addItem(props.product);
     }
 
+<<<<<<< HEAD
     function openText(){
         setIsClicked(true);
     }
@@ -27,6 +28,8 @@ const Card = (props, key) => {
 
     const price = (props.product.price).toFixed(2);
 
+=======
+>>>>>>> pierre
     return (  
         <div className='card'>
                 <div className='card__img'>
@@ -35,7 +38,7 @@ const Card = (props, key) => {
                 <div className='information'>
                     <div className='title'>
                         <div className='name'>{props.product ? props.product.name_article : 'article1'}</div>
-                        <div>{price}€</div>
+                        <div>{props.product.price.toFixed(2)}€</div>
                     </div>
                     <div className='parent__description'>
 
