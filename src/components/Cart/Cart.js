@@ -65,11 +65,13 @@ const Cart = (props) => {
                     <div className='amount'>{total}€</div>
                 </div> 
                 
-                <div className='payment'>
-                    <button type='button' onClick={payment} >Payer</button>
-                </div>
             </div>
         ))}
+        {cartCount !== 0 && (
+            <div className='payment'>
+                <button type='button' onClick={payment} >Payer</button>
+            </div>
+        )}  
     </div>
   
     )

@@ -7,6 +7,8 @@ async function GetSubdomain () {
 
     const slugify = getSubdomain(currentUrl);
     console.log(slugify);
+
+    return slugify;
 }
 
 export default GetSubdomain;

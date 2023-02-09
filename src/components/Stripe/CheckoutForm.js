@@ -17,7 +17,7 @@ export default function CheckoutForm() {
  const [message, setMessage] = useState(null);
  const [isLoading, setIsLoading] = useState(false);
 
- const {totalPrice, clearCart} = useShoppingCart()
+ const { totalPrice } = useShoppingCart()
  
  useEffect(() => {
    if (!stripe) {

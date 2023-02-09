@@ -14,7 +14,6 @@ const Card = (props, key) => {
 
     const price = (props.product.price).toFixed(2);
 
-
     return (  
         <div className='card'>
                 <div className='card__img'>

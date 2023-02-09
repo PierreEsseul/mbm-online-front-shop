@@ -14,7 +14,7 @@ const stripePromise = loadStripe(PUBLIC_KEY);
  
 export default function App() {
   const [clientSecret, setClientSecret] = useState("");
-  const { cartCount, currency, totalPrice, cartDetails} = useShoppingCart()
+  const { totalPrice } = useShoppingCart()
 
   console.log(typeof(totalPrice))
 
@@ -27,7 +27,7 @@ export default function App() {
     })
       .then((res) => res.json())
       .then((data) => setClientSecret(data.clientSecret));
-  }, []);
+  },);
  
   const appearance = {
     theme: 'stripe',
