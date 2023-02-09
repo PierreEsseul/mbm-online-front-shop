@@ -39,7 +39,7 @@ const Cart = (props) => {
         {Object.entries(cartDetails).map(([key, value]) => (
             <div>
                 <div className="items" key={key}>
-                    <div><img src={value.picture_url} alt="product display" /></div>
+                    <div className='img'><img src={value.picture_url} alt="product display" /></div>
                     <div className='items__name'>{value.name_article}</div>
                     <div className='items__quantity'>
                         <button
