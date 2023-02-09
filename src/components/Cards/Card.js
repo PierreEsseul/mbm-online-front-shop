@@ -17,7 +17,6 @@ const Card = (props, key) => {
         addItem(props.product);
     }
 
-<<<<<<< HEAD
     function openText(){
         setIsClicked(true);
     }
@@ -26,10 +25,7 @@ const Card = (props, key) => {
         setIsClicked(false);
     }
 
-    const price = (props.product.price).toFixed(2);
 
-=======
->>>>>>> pierre
     return (  
         <div className='card'>
                 <div className='card__img'>
@@ -76,7 +72,7 @@ const Card = (props, key) => {
                                     
                                         <AiOutlineMinusCircle />
                                 </button>
-                                <div>{cartDetails[props.product.id].quantity}</div>
+                                <div className='product-quantity'>{cartDetails[props.product.id].quantity}</div>
                                 <button 
                                     type='button' 
                                     onClick={() => incrementItem(props.product.id)}>
