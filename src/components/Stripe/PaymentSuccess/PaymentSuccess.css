@@ -17,8 +17,10 @@
     font-size: larger;
     padding-left: 0.7rem;
     padding-right: 0.7rem;
-    margin-left: 91px;
-    margin-top: 30px;
+    margin: auto;
+    margin-top: 10px;
+    display: block;
+    cursor: pointer;
 }
 
 .page img{
@@ -28,4 +30,20 @@
 
 .page h3{
     text-align: center;
+}
+
+
+@media (min-width: 800px){
+    .page img{
+        display: block;
+        width: 25%;
+        margin: auto;
+    }
+    .page button{
+        font-size: 30px;
+    }
+
+    .page h3{
+        font-size: 30px;
+    }
 }

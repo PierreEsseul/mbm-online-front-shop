@@ -44,4 +44,18 @@
     .header {
         height: 4.5rem;
     }
+
+    .header h1 {
+        margin-left: 4rem;
+    }
+
+    .header .icons a {
+        margin-right: 2rem;
+    }
+
+    .number{
+        right: 28px;
+        bottom: 25px;
+    }
+    
 }

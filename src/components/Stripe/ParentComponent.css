@@ -9,3 +9,24 @@
     width: 80%;
     height: 50%;
 }
+
+.lien__panier{
+    position: absolute;
+    font-size: 15px;
+    border: none;
+    width: 140px;
+    background-color: black;
+    color: white;
+    border-radius: 73px;
+    text-decoration: none;
+    text-align: center;
+    top: -120px;
+}
+
+@media (min-width: 800px) {
+    .lien__panier{
+        font-size: 20px;
+        width: 200px;
+    }
+     
+}
