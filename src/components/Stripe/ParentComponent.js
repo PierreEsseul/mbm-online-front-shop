@@ -39,6 +39,8 @@ export default function App() {
  
   return (
     <div className="stripe">
+      <a href="/cart" className="lien__panier"><p>Revenir au panier</p></a>
+
       {clientSecret && (
         <Elements options={options} stripe={stripePromise}>
           <CheckoutForm />

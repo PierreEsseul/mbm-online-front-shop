@@ -106,6 +106,9 @@
         width: 320px;
         height: 280px;
     }
+    .description{
+        height: 50px;
+    }
 }
 
 @media (min-width: 1400px) {
@@ -114,7 +117,7 @@
         grid-template-columns: 1fr 1fr 1fr;
         grid-template-rows: 100px 100px 100px;
         grid-gap: 30px;
-        grid-row-gap: 23rem;
+        grid-row-gap: 25rem;
         margin: auto;
         justify-content: center;
         width: 500px;
@@ -124,7 +127,9 @@
         width: 400px;
         height: 320px;
     }
-    
+    .description{
+        height: 55px;
+    }
 }
 
 

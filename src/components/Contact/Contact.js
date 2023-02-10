@@ -1,5 +1,6 @@
 import React from 'react';
 
+
 import './Contact.css'
 import {HiMail, HiPhone} from 'react-icons/hi';
 
@@ -11,6 +12,7 @@ const Contact = (props) => {
     return (
         <div className='parent__contact'>
             <div className='contact'>
+                <a href='/'>Retour Accueil</a>
                 
                 <h3>Informations sur la boutique</h3>
 
@@ -32,13 +34,12 @@ const Contact = (props) => {
                     </div>
                 </div>
                 <div className='hours'>
-                    <p>Horaire d'ouverture :</p>
+                    <p>Horaires d'ouverture :</p>
                     <div className='hours__details'>
                         <div>10H - 14H</div>
                     </div>
                 </div>
 
-                <a href='/'>Retour Accueil</a>
             </div>
             <div className='image'><img src='./img/png/cardPersonnalisez.png' alt='contact infos' /></div>
         </div>

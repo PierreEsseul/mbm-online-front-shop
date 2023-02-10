@@ -81,19 +81,42 @@
 }
 
 .payment button, .cart .empty__cart a {
+    position: absolute;
+    left: 0;
+    right: 0;
+    margin: auto;
+    font-size: 79%;
     border: none;
+    width: 39%;
     background-color: black;
     color: white;
-    border-radius: 20px;
-    font-size: larger;
-    padding-left: 0.7rem;
-    padding-right: 0.7rem;
+    border-radius: 73px;
     text-decoration: none;
+    text-align: center;
+}
+
+.payer-btn{
+    font-size: 100% !important;
+    width: 20% !important;
 }
 
 @media (min-width: 800px){
 
     .cart{
+        position: absolute;
+        margin: auto;
+        width: 900px;
         font-size: 160%;
+        top: 10rem;
+        left: 0;
+        right: 0;
+    }
+
+    .payment button, .cart .empty__cart a{
+        position: absolute;
+        left: 0;
+        right: 0;
+        margin: auto;
+        width: 39%;
     }
 }

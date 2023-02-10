@@ -29,7 +29,7 @@ const Cart = (props) => {
         {cartCount === 0 && (
             <div className='empty__cart'>
                 <h3>Vous n'avez pas d'article</h3> 
-                <a href="/">Commencer vos achats</a>
+                <a href="/"><p>Commencer vos achats</p></a>
             </div>
 
         )}  
@@ -65,7 +65,7 @@ const Cart = (props) => {
                     <div className='amount'>{totalPrice.toFixed(2)}€</div>
                 </div> 
                 <div className='payment'>
-                    <button type='button' onClick={payment} >Payer</button>
+                    <button type='button' onClick={payment} className="payer-btn">Payer</button>
                 </div>
             </div>
         )}  
