@@ -40,24 +40,16 @@
     margin: 7px 7px 7px 7px;
 }
 
-.parent__description{
-    display: flex;
-    align-items: flex-start;
-    justify-content: space-between;
-}
 
 .description {
     overflow: auto;
-    width: 220px;
-    height: 60px;
+    width: 100%;
+    height: auto;
     text-align: justify;
     display: flex;
     align-items: flex-start;
 }
 
-.CiCircleChevUp {
-    margin-left: 180px;
-}
 .child__description{
     display: flex;
     align-items: flex-start;
@@ -79,7 +71,7 @@
 .card .change-quantity {
     display: flex;
     align-items: center;
-    gap: 0.8rem;
+    margin-top: 10px;
 }
 
 .change-quantity .product-quantity {
@@ -92,8 +84,47 @@
     justify-content: center;
     background:none;
     color: black;
-    border-radius: 30px 30px;
     border: none;
     font-size: 20px;
+    margin: auto;
 }
+
+
+ @media (min-width: 800px) and (max-width: 1400px) {
+    .cards{
+        display: grid;
+        grid-template-columns: 1fr 1fr ;
+        grid-template-rows: 100px 100px 100px;
+        grid-gap: 20px;
+        grid-row-gap: 23rem;
+        margin: auto;
+        justify-content: center;
+        width: 300px;
+    }
+
+    .card__img {
+        width: 320px;
+        height: 280px;
+    }
+}
+
+@media (min-width: 1400px) {
+    .cards{
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-template-rows: 100px 100px 100px;
+        grid-gap: 30px;
+        grid-row-gap: 23rem;
+        margin: auto;
+        justify-content: center;
+        width: 500px;
+    }
+
+    .card__img {
+        width: 400px;
+        height: 320px;
+    }
+    
+}
+
 
