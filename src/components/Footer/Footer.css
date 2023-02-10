@@ -1,0 +1,21 @@
+.footer {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    background-color: black;
+    color: white;
+    font-size: x-small;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.footer a {
+    color: white;
+}
+
+@media (min-width: 500px) {
+    .footer p,a {
+        font-size: medium;
+    }
+}
