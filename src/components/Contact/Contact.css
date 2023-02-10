@@ -40,13 +40,8 @@
     align-items: center;
 }
 
-@media (min-width: 1200px) and (max-width: 1800px) {
-    .image{
-        display: inline;
-        position: relative;
-        left: 43rem;
-        top: 6rem;
-    }  
+@media (min-width: 769px) and (max-width: 1800px) {
+
     
     .contact{
         font-size: 30px;
@@ -54,11 +49,16 @@
     }
 
     .contact a{
-        width: 200px;
+        width: 800px;
+    }
+
+    .child__contact{
+        margin-left: 25%;
+        margin-top: 15% !important;
     }
 }
 
-@media (min-width: 1800px){
+@media (min-width: 1300px){
 
     .parent__contact{
         display: flex;
@@ -70,15 +70,20 @@
     }
 
     .contact a{
-        width: 200px;
+        width: 800px;
     }
 
     .image{
         display: inline;
         position: relative;
-        left: 80rem;
-        top: 6rem;
+        left: 60%;
+        top: 12rem;
+        width: 8%;
     }    
 
+    .child__contact{
+        margin-left: 25%;
+        margin-top: 15% !important;
+    }
     
 }
