@@ -90,3 +90,10 @@
     padding-right: 0.7rem;
     text-decoration: none;
 }
+
+@media (min-width: 800px){
+
+    .cart{
+        font-size: 160%;
+    }
+}
