@@ -6,9 +6,11 @@ import './HomePage.css';
 
 const HomePage = (props) => {
 
+    const shopName = props.name;
+
     useEffect(() => {
-        document.title = `${props.data.shop.shop_name} | MadeByMe`;
-    }, []);
+        document.title = `${props.name} | MadeByMe`;
+    }, [shopName]);
 
     return (
         <div className="home_page">

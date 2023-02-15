@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import { useShoppingCart } from 'use-shopping-cart';
 import { useNavigate } from 'react-router-dom';
 
@@ -7,6 +7,12 @@ import {AiOutlinePlusCircle, AiOutlineMinusCircle} from 'react-icons/ai';
 import './Cart.css';
 
 const Cart = (props) => {
+    const shopName = props.name;
+
+    useEffect(() => {
+        document.title = `${props.name} | Panier`;
+    }, [shopName]);
+
     const { 
         cartCount,
         totalPrice, 
@@ -19,6 +25,11 @@ const Cart = (props) => {
 
     const payment = () => {
         navigate('/payment');
+    };
+
+    function price(price) {
+        let roundedPrice = parseInt(price, 10).toFixed(2);
+        return roundedPrice;
     };
     
     return (
@@ -53,7 +64,7 @@ const Cart = (props) => {
                                 <AiOutlinePlusCircle />
                         </button>
                     </div>
-                    <div className='items__price'>{value.price.toFixed(2)}€</div>
+                    <div className='items__price'>{price(value.price)}€</div>
                 </div> 
                 
             </div>

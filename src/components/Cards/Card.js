@@ -12,10 +12,7 @@ const Card = (props, key) => {
 
     const [isClicked, setIsClicked] = useState(false);
 
-    console.log(props.product.price);
-
     let price = parseInt(props.product.price, 10).toFixed(2);
-    console.log("Value price : ", price);
     
     function addToCart() {
         addItem(props.product);

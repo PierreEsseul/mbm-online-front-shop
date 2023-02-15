@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 import { useShoppingCart } from 'use-shopping-cart';
 import { useNavigate } from 'react-router-dom';
 
@@ -6,7 +6,14 @@ import { useNavigate } from 'react-router-dom';
 import './PaymentSuccess.css'
 
 
-export default function PaymentSuccess() {
+export default function PaymentSuccess(props) {
+
+    const shopName = props.name;
+
+    useEffect(() => {
+        document.title = `${props.name} | Payment Réussi`;
+    }, [shopName]);
+
     const {clearCart} = useShoppingCart()
     const navigate = useNavigate();
     

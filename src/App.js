@@ -17,7 +17,7 @@ import getShopHandler from './components/Back/GetShop';
 function App() {
 
   const [data, setData] = useState(null);
-
+  const [name, setName] = useState('');
   const slugify = window.location.hostname.split(".")[0];
   console.log(slugify);
 
@@ -26,21 +26,25 @@ function App() {
       const result = await getShopHandler(slugify);
       console.log("Value result : ", result);
       setData(result.shop);
+      setName(result.shop.shop.name_shop);
     };
-
+    
     fetchData();
+    
   }, []);
+
+  
 
   return (
     <div>
       <Header data={data} />
       <Router>
         <Routes>
-          <Route exact path="/" element={<HomePage data={data} />} />
-          <Route path="/cart" element={<Cart />} />
-          <Route path="/contact" element={<Contact data={data} />} />
-          <Route path="/payment" element={<ParentComponent />} />
-          <Route path="/payment_success" element={<PaymentSuccess />} />
+          <Route exact path="/" element={<HomePage data={data} name={name}/>} />
+          <Route path="/cart" element={<Cart name={name}/>} />
+          <Route path="/contact" element={<Contact data={data} name={name}/>} />
+          <Route path="/payment" element={<ParentComponent name={name}/>} />
+          <Route path="/payment_success" element={<PaymentSuccess name={name}/>} />
           <Route path="/cgu" element={<Cgu />} />
           <Route path="/legal-mention" element={<LegalMention />} />
           <Route path="*" element={<Error404 />} />

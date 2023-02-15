@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 
 import Card from './Card.js';
 
@@ -6,6 +6,7 @@ import Card from './Card.js';
 import './Cards.css';
 
 const Cards = (props) => {
+
 
     return (
         <div className='cards'> 

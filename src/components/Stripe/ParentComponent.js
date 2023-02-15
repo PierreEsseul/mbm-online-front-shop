@@ -12,7 +12,12 @@ const stripePromise = loadStripe(PUBLIC_KEY);
 
 
  
-export default function App() {
+export default function App(props) {
+  const shopName = props.name;
+
+    useEffect(() => {
+        document.title = `${props.name} | Payment`;
+    }, [shopName]);
   const [clientSecret, setClientSecret] = useState("");
   const { totalPrice } = useShoppingCart()
 
