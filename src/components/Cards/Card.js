@@ -11,6 +11,11 @@ const Card = (props, key) => {
     const { addItem, cartDetails, incrementItem, decrementItem } = useShoppingCart();
 
     const [isClicked, setIsClicked] = useState(false);
+
+    console.log(props.product.price);
+
+    let price = parseInt(props.product.price, 10).toFixed(2);
+    console.log("Value price : ", price);
     
     function addToCart() {
         addItem(props.product);
@@ -33,7 +38,7 @@ const Card = (props, key) => {
                 <div className='information'>
                     <div className='title'>
                         <div className='name'>{props.product ? props.product.name_article : 'article1'}</div>
-                        <div>{props.product.price.toFixed(2)}€</div>
+                        <div>{price}€</div>
                     </div>
                     <div className='parent__description'>
 

@@ -1,4 +1,5 @@
 import React from 'react';
+
 import Card from './Card.js';
 
 
@@ -11,7 +12,11 @@ const Cards = (props) => {
             {props?.data?.articles ? props.data.articles.map(product => 
                 <Card product={product} key={product.id_article}></Card>
             ) 
-            : "chargement shop"
+            :
+                <div className='loader'>
+                    <p>chargement de la boutique...</p>
+                    <div className='loader__icon'></div>
+                </div> 
             }   
         </div>
     );

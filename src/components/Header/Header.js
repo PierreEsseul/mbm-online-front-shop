@@ -9,9 +9,11 @@ import './Header.css';
 
 const Header = (props) => {
     const {cartCount} = useShoppingCart();
+
     return(
+        
         <div className='header'>
-            <a href="/"><h1>Shop Name</h1></a>
+            <a href="/"><h1>{props.data?.shop.name_shop}</h1></a>
         
             <div className='icons'>
                 <a href="/contact"><BsInfoSquare /></a>
