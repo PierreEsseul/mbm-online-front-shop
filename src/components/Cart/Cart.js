@@ -28,7 +28,7 @@ const Cart = (props) => {
     };
 
     function price(price) {
-        let roundedPrice = parseInt(price, 10).toFixed(2);
+        let roundedPrice = parseFloat(price, 10).toFixed(2);
         return roundedPrice;
     };
     

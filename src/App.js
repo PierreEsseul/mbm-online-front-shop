@@ -43,8 +43,8 @@ function App() {
           <Route exact path="/" element={<HomePage data={data} name={name}/>} />
           <Route path="/cart" element={<Cart name={name}/>} />
           <Route path="/contact" element={<Contact data={data} name={name}/>} />
-          <Route path="/payment" element={<ParentComponent name={name}/>} />
-          <Route path="/payment_success" element={<PaymentSuccess name={name}/>} />
+          <Route path="/payment" element={<ParentComponent name={name} slugify={slugify} />} />
+          <Route path="/payment_success" element={<PaymentSuccess name={name} />} />
           <Route path="/cgu" element={<Cgu />} />
           <Route path="/legal-mention" element={<LegalMention />} />
           <Route path="*" element={<Error404 />} />

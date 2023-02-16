@@ -10,7 +10,7 @@ import {
  useElements
 } from "@stripe/react-stripe-js";
  
-export default function CheckoutForm() {
+export default function CheckoutForm(props) {
 
  const stripe = useStripe();
  const elements = useElements();
@@ -59,7 +59,7 @@ export default function CheckoutForm() {
    const { error } = await stripe.confirmPayment({
      elements,
      confirmParams: {
-       return_url: `${process.env.REACT_APP_URL_FRONT}/payment_success`,
+       return_url: `http://${props.slugify}.${process.env.REACT_APP_URL_SHOP}/payment_success`,
      },
    });
    if (error.type === "card_error" || error.type === "validation_error") {

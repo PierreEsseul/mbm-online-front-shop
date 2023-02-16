@@ -48,7 +48,7 @@ export default function App(props) {
 
       {clientSecret && (
         <Elements options={options} stripe={stripePromise}>
-          <CheckoutForm />
+          <CheckoutForm slugify={props.slugify} />
         </Elements>
       )}
     </div>
