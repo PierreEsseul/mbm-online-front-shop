@@ -11,8 +11,8 @@ const Card = (props, key) => {
     const { addItem, cartDetails, incrementItem, decrementItem } = useShoppingCart();
 
     const [isClicked, setIsClicked] = useState(false);
-
-    let price = parseInt(props.product.price, 10).toFixed(2);
+    
+    let price = parseFloat(props.product.price, 10).toFixed(2);
     
     function addToCart() {
         addItem(props.product);
