@@ -1,10 +1,9 @@
 .stripe{
-    position: absolute;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    padding-top: 13rem;
     color: black;
-    top: 0;
-    bottom: 0;
-    left: 0;
-    right: 0;
     margin: auto;
     width: 80%;
     height: 50%;
@@ -13,14 +12,8 @@
 .lien__panier{
     position: absolute;
     font-size: 15px;
-    border: none;
-    width: 140px;
-    background-color: black;
-    color: white;
-    border-radius: 73px;
-    text-decoration: none;
-    text-align: center;
-    top: -98px;
+    color: black;
+    top: 7rem;
 }
 
 @media (min-width: 800px) {

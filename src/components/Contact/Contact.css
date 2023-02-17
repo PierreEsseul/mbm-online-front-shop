@@ -1,3 +1,9 @@
+.parent__contact {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
 .contact {
     position: absolute;
     margin-top: 6.3rem;
@@ -42,11 +48,6 @@
 
 
 @media (min-width: 769px){
-
-    .parent__contact{
-        display: flex;
-    }
-
     .contact{
         font-size: 20px;
         margin-left: 5%;

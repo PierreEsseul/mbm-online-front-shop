@@ -1,6 +1,9 @@
 .cart {
-    position: absolute;
-    margin-top: 5.4rem;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    position: static;
+    padding-top: 5.4rem;
     width: 95%;
     margin-left: 0.5rem;
 }
@@ -101,16 +104,11 @@
 }
 
 @media (min-width: 800px){
-
     .cart{
-        position: absolute;
         margin: auto;
         width: 900px;
         font-size: 160%;
-        top: 10rem;
-        left: 0;
-        right: 0;
-        margin-bottom: 20rem;
+        margin-bottom: 7rem;
     }
 
     .payment button, .cart .empty__cart a{

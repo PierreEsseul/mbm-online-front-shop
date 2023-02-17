@@ -25,11 +25,34 @@
     100% { transform: rotate(360deg); }
 }
 
+
 @media (min-width: 769px) {
+    .child-cards{
+        display: grid;
+        grid-template-columns: 1fr 1fr ;
+        grid-template-rows: 26rem 26rem 26rem;
+        grid-gap: 2rem;
+        margin: auto;
+        justify-content: center;
+        margin-top: 6rem;
+    }
 
     .parent-loader{
         margin: auto;
         z-index: -1;
     }
     
+}
+
+@media (min-width: 1400px) {
+    .child-cards{
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-template-rows:  30rem 30rem 33rem;
+        grid-gap: 3rem;
+        grid-row-gap: 3rem;
+        margin: auto;
+        justify-content: center;
+        margin-top: 6rem;
+    }
 }

@@ -44,9 +44,15 @@ const Card = (props, key) => {
                             {!isClicked 
                             ? 
                             <div className='child__description'>
-                                <p>{props.product.description.substring(0, props.product.description.indexOf(" ",
-                                    props.product.description.indexOf(" ", props.product.description.indexOf(" ") + 1) + 1))}...</p>
-                                <button onClick={openText}><CiCircleChevDown /></button>
+                                {props.product.description.split(" ").length > 3 ? 
+                                    <>
+                                        <p>{props.product.description.substring(0, props.product.description.indexOf(" ",
+                                            props.product.description.indexOf(" ", props.product.description.indexOf(" ") + 1) + 1))}...</p>
+                                        <button onClick={openText}><CiCircleChevDown /></button>
+                                    </>
+                                :
+                                    <p>{props.product.description}</p>
+                                }
                             </div>
                             : 
                             <div>

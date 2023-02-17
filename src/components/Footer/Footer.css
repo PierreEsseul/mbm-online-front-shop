@@ -1,7 +1,5 @@
 .footer {
-    position: fixed;
     width: 100%;
-    bottom: 0;
     background-color: black;
     color: white;
     font-size: x-small;
@@ -15,10 +13,6 @@
 }
 
 @media (min-width: 500px) {
-    .footer{
-        position: inherit;
-    }
-
     .footer p,a {
         font-size: medium;
     }
