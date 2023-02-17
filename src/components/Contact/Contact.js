@@ -4,7 +4,7 @@ import React, { useEffect } from 'react';
 import './Contact.css'
 import {HiMail, HiPhone} from 'react-icons/hi';
 
-
+console.log("Dans Contact.js");
 
 
 const Contact = (props) => {

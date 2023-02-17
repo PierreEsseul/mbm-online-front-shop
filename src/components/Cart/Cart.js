@@ -6,6 +6,9 @@ import {AiOutlinePlusCircle, AiOutlineMinusCircle} from 'react-icons/ai';
 
 import './Cart.css';
 
+console.log("Dans Cart.js")
+
+
 const Cart = (props) => {
     const shopName = props.name;
 

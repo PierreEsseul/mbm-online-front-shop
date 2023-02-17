@@ -4,6 +4,9 @@ import Cards from '../Cards/Cards';
 
 import './HomePage.css';
 
+
+console.log("Dans HomePage.js")
+
 const HomePage = (props) => {
 
     const shopName = props.name;
