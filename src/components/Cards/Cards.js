@@ -5,6 +5,8 @@ import Card from './Card.js';
 
 import './Cards.css';
 
+console.log("Dans Cards.js")
+
 const Cards = (props) => {
 
 

@@ -10,7 +10,7 @@ import './ParentComponent.css'
 const PUBLIC_KEY = `${process.env.REACT_APP_STRIPE_PUBLIC_KEY}`;
 const stripePromise = loadStripe(PUBLIC_KEY);
 
-
+console.log("Dans ParentStripe")
  
 export default function App(props) {
   const shopName = props.name;

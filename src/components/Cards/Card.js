@@ -6,6 +6,7 @@ import {CiCircleChevDown, CiCircleChevUp} from 'react-icons/ci'
 
 import './Card.css'
 
+console.log("Dans Card.js")
 
 const Card = (props, key) => {
     const { addItem, cartDetails, incrementItem, decrementItem } = useShoppingCart();
