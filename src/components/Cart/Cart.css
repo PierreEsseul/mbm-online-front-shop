@@ -110,6 +110,7 @@
         top: 10rem;
         left: 0;
         right: 0;
+        margin-bottom: 20rem;
     }
 
     .payment button, .cart .empty__cart a{

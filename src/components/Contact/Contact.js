@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react';
+import React, { useEffect, useState } from 'react';
 
 
 import './Contact.css'
@@ -17,6 +17,7 @@ const Contact = (props) => {
 
     return (
         <>
+            {console.log("dans les contacts")}
             {props.data && ( 
                 <div className='parent__contact'> 
                     <div className='contact'>
@@ -32,10 +33,12 @@ const Contact = (props) => {
                                 <div>{props.data.user.mail}</div>
                             </div>
                         </div>  
+
+                        {console.log("dans les contacts")}
                         
                         
-                        {props.data.address.phone_number && (
-                        <>
+                        {props.data.address && (
+                            <>
                             <div className='phone'>
                                 <HiPhone />
                                 <div>{props.data.address.phone_number}</div>
@@ -55,7 +58,10 @@ const Contact = (props) => {
                                     <div>{props.data.address.hours}</div>
                                 </div>
                             </div>
+                           
                         </>)}
+
+                        {console.log("fin des contacts")}
 
                     </div>
                     <div className='image'><img src='./img/png/cardPersonnalisez.png' alt='contact infos' /></div>

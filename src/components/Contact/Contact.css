@@ -40,32 +40,15 @@
     align-items: center;
 }
 
-@media (min-width: 769px) and (max-width: 1800px) {
 
-    
-    .contact{
-        font-size: 30px;
-        margin-left: 5%;
-    }
-
-    .contact a{
-        width: 800px;
-    }
-
-    .child__contact{
-        margin-left: 25%;
-        margin-top: 15% !important;
-    }
-}
-
-@media (min-width: 1300px){
+@media (min-width: 769px){
 
     .parent__contact{
         display: flex;
     }
 
     .contact{
-        font-size: 30px;
+        font-size: 20px;
         margin-left: 5%;
     }
 
@@ -77,9 +60,13 @@
         display: inline;
         position: relative;
         left: 60%;
-        top: 12rem;
+        top: 7rem;
         width: 8%;
     }    
+
+    .image img{
+        width: 300px;
+    }
 
     .child__contact{
         margin-left: 25%;

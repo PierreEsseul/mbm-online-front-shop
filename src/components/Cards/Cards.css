@@ -1,12 +1,10 @@
-.cards {
-    margin-top: 5.4rem;
-    width: 50%;
-    display: flex;
+.cards{
+    width: 100%;
+    margin: auto;
 }
-
 .cards .loader {
     width: auto;
-    margin-top: 15rem;
+    margin-top: 7rem;
     margin-bottom: 40rem;
     display: flex;
     flex-direction: column;
@@ -25,4 +23,13 @@
 @keyframes spin {
     0% { transform: rotate(0deg); }
     100% { transform: rotate(360deg); }
+}
+
+@media (min-width: 769px) {
+
+    .parent-loader{
+        margin: auto;
+        z-index: -1;
+    }
+    
 }
