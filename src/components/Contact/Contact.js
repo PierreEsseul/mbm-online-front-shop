@@ -33,7 +33,6 @@ const Contact = (props) => {
                             </div>
                         </div>  
                         
-                        
                         {props.data.address.phone_number && (
                         <>
                             <div className='phone'>
