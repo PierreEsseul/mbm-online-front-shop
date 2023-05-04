@@ -1,16 +1,12 @@
 import React, {useState} from 'react';
 import { useShoppingCart } from 'use-shopping-cart';
 import {AiOutlinePlusCircle, AiOutlineMinusCircle} from 'react-icons/ai';
-import {CiCircleChevDown, CiCircleChevUp} from 'react-icons/ci'
+import {CiCircleChevDown, CiCircleChevUp} from 'react-icons/ci';
 
-
-import './Card.css'
-
-console.log("Dans Card.js")
+import './Card.css';
 
 const Card = (props, key) => {
     const { addItem, cartDetails, incrementItem, decrementItem } = useShoppingCart();
-
     const [isClicked, setIsClicked] = useState(false);
     
     let price = parseFloat(props.product.price, 10).toFixed(2);
@@ -26,7 +22,6 @@ const Card = (props, key) => {
     function closeText(){
         setIsClicked(false);
     }
-
 
     return (  
         <div className='card'>
@@ -95,3 +90,5 @@ const Card = (props, key) => {
 };
 
 export default Card;
+
+

@@ -1,15 +1,9 @@
-import React, { useEffect } from 'react';
-
+import React from 'react';
 import Card from './Card.js';
-
 
 import './Cards.css';
 
-console.log("Dans Cards.js")
-
 const Cards = (props) => {
-
-
     return (
         <div className='cards'> 
             {props?.data?.articles ?
@@ -18,18 +12,17 @@ const Cards = (props) => {
                     <Card product={product} key={product.id_article}></Card>
                 )}
                 </div>
-            :
-                
+            :    
                 <div className='parent-loader'> 
                     <div className='loader'>
                         <p>chargement de la boutique...</p>
                         <div className='loader__icon'></div>
                     </div> 
-                </div>
-                
+                </div>   
             }   
         </div>
     );
 };
 
 export default Cards;
+

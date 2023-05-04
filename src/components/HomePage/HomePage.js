@@ -1,11 +1,7 @@
 import React, { useEffect } from 'react';
-
 import Cards from '../Cards/Cards';
 
 import './HomePage.css';
-
-
-console.log("Dans HomePage.js")
 
 const HomePage = (props) => {
 
@@ -21,10 +17,11 @@ const HomePage = (props) => {
                 data={{
                     ...props.data,
                     articles: props.data?.articles?.map((d) => ({ ...d, id: d.id_article })),
-            }}
+                }}
             />
         </div>
     );
 };
 
 export default HomePage;
+
